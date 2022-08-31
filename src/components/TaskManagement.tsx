@@ -4,7 +4,7 @@ import { getDocs, collection } from "firebase/firestore";
 
 type Task = {
   docId: string;
-  title: string;
+  taskText: string;
   timeStamp: string;
 };
 
@@ -22,7 +22,7 @@ function TaskManagement() {
         console.log(doc);
         const task: Task = {
           docId: doc.id,
-          title: doc.data().title,
+          taskText: doc.data().title,
           timeStamp: doc.data({ serverTimestamps: "estimate" }).timeStamp,
         };
         userList.push(task);
@@ -39,8 +39,9 @@ function TaskManagement() {
 
   return (
     <>
+      test
       {taskList.map((user) => (
-        <h1>{user.title}</h1>
+        <>{user.taskText}test</>
       ))}
     </>
   );
