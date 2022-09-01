@@ -1,2 +1,2 @@
-npm run build
-firebase deploy --only hosting,storage,firestore
+serve -s build
+firebase deploy
