@@ -3,7 +3,7 @@ import { getFirestore } from "@firebase/firestore";
 import { getStorage } from "@firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBT9R_f3mVuns4bci5qqTM4TSnz3_9GKOA",
+  apiKey: process.env.API_KEY,
   authDomain: "managetaskapp.firebaseapp.com",
   projectId: "managetaskapp",
   storageBucket: "managetaskapp.appspot.com",
